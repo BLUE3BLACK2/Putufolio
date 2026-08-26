@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="aboutGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Circle & Composition -->
+  <circle cx="250" cy="250" r="230" fill="url(#aboutGrad)" stroke="#18181B" stroke-width="4"/>
+  <circle cx="250" cy="250" r="210" fill="#FAF7F2" stroke="#18181B" stroke-width="4"/>
+
+  <!-- Code Workspace Silhouette / Illustration -->
+  <g transform="translate(100, 110)">
+    <!-- Desk / Screen -->
+    <rect x="20" y="30" width="260" height="170" rx="14" fill="#18181B" stroke="#18181B" stroke-width="3"/>
+    <!-- Screen Header -->
+    <rect x="20" y="30" width="260" height="28" rx="14" fill="#27272A"/>
+    <circle cx="40" cy="44" r="5" fill="#EF4444"/>
+    <circle cx="56" cy="44" r="5" fill="#FBBF24"/>
+    <circle cx="72" cy="44" r="5" fill="#10B981"/>
+
+    <!-- Code lines -->
+    <rect x="40" y="75" width="80" height="8" rx="4" fill="#3B82F6"/>
+    <rect x="130" y="75" width="110" height="8" rx="4" fill="#E4E4E7"/>
+    <rect x="55" y="95" width="140" height="8" rx="4" fill="#10B981"/>
+    <rect x="55" y="115" width="100" height="8" rx="4" fill="#F59E0B"/>
+    <rect x="55" y="135" width="160" height="8" rx="4" fill="#A855F7"/>
+    <rect x="40" y="155" width="60" height="8" rx="4" fill="#3B82F6"/>
+
+    <!-- Stand -->
+    <rect x="135" y="200" width="30" height="40" fill="#71717A" stroke="#18181B" stroke-width="3"/>
+    <rect x="100" y="240" width="100" height="12" rx="6" fill="#18181B"/>
+
+    <!-- Coffee Cup -->
+    <g transform="translate(230, 195)">
+      <rect x="0" y="10" width="30" height="35" rx="4" fill="#EF4444" stroke="#18181B" stroke-width="3"/>
+      <path d="M 30 18 C 38 18 38 32 30 32" fill="none" stroke="#18181B" stroke-width="3"/>
+      <path d="M 8 5 Q 12 0 16 5" fill="none" stroke="#71717A" stroke-width="2" stroke-linecap="round"/>
+      <path d="M 16 5 Q 20 0 24 5" fill="none" stroke="#71717A" stroke-width="2" stroke-linecap="round"/>
+    </g>
+
+    <!-- Books / Learning -->
+    <g transform="translate(30, 205)">
+      <rect x="0" y="25" width="55" height="12" rx="3" fill="#2563EB" stroke="#18181B" stroke-width="2"/>
+      <rect x="5" y="13" width="50" height="12" rx="3" fill="#10B981" stroke="#18181B" stroke-width="2"/>
+      <rect x="10" y="2" width="42" height="11" rx="3" fill="#F59E0B" stroke="#18181B" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- Handwritten quote badge -->
+  <g transform="translate(130, 390)">
+    <rect x="0" y="0" width="240" height="44" rx="22" fill="#18181B"/>
+    <text x="120" y="27" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#FACC15" text-anchor="middle">Computer Science · Undiksha</text>
+  </g>
+</svg>

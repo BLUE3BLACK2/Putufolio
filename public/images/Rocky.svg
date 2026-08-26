@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rockyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="aiGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="1" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="800" height="500" rx="28" fill="url(#rockyGrad)"/>
+  <rect width="800" height="500" rx="28" fill="url(#gridPattern)"/>
+
+  <!-- Scanning Frame Overlay -->
+  <g transform="translate(140, 70)">
+    <!-- Main Scan Box -->
+    <rect x="0" y="0" width="520" height="340" rx="20" fill="#1E293B" stroke="#38BDF8" stroke-width="2" stroke-dasharray="8 8" opacity="0.8"/>
+    
+    <!-- Target Corners -->
+    <path d="M 20 50 L 20 20 L 50 20" fill="none" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 500 50 L 500 20 L 470 20" fill="none" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 20 290 L 20 320 L 50 320" fill="none" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 500 290 L 500 320 L 470 320" fill="none" stroke="#38BDF8" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Waste to Craft Transformation Graphic -->
+    <g transform="translate(80, 70)">
+      <!-- Discarded Plastic Bottle / Can -->
+      <g transform="translate(40, 20)">
+        <rect x="10" y="0" width="30" height="15" rx="3" fill="#64748B"/>
+        <path d="M 5 15 C 5 15, 0 35, 0 60 L 0 130 C 0 140, 10 150, 25 150 C 40 150, 50 140, 50 130 L 50 60 C 50 35, 45 15, 45 15 Z" fill="#94A3B8" opacity="0.75" stroke="#E2E8F0" stroke-width="2"/>
+        <text x="25" y="90" font-family="system-ui, sans-serif" font-size="10" font-weight="700" fill="#0F172A" text-anchor="middle">PETE 1</text>
+      </g>
+
+      <!-- Laser / Scanning Bar -->
+      <line x1="20" y1="100" x2="340" y2="100" stroke="#34D399" stroke-width="3" stroke-linecap="round"/>
+      <rect x="20" y="96" width="320" height="8" fill="#34D399" opacity="0.3"/>
+
+      <!-- Arrow -->
+      <path d="M 140 100 L 200 100 M 185 85 L 205 100 L 185 115" fill="none" stroke="#FACC15" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- Upcycled Smart Plant Pot / Pen Holder -->
+      <g transform="translate(230, 15)">
+        <path d="M 10 30 L 70 30 L 60 140 L 20 140 Z" fill="#10B981" stroke="#34D399" stroke-width="3"/>
+        <circle cx="40" cy="70" r="14" fill="#FACC15"/>
+        <path d="M 35 68 Q 40 74 45 68" fill="none" stroke="#18181B" stroke-width="2"/>
+        <!-- Sprout -->
+        <path d="M 40 30 Q 40 5 25 10 Q 30 25 40 30" fill="#4ADE80" stroke="#16A34A" stroke-width="2"/>
+        <path d="M 40 30 Q 45 0 60 8 Q 50 25 40 30" fill="#22C55E" stroke="#16A34A" stroke-width="2"/>
+      </g>
+    </g>
+
+    <!-- AI Detection Tag -->
+    <g transform="translate(30, 260)">
+      <rect x="0" y="0" width="220" height="42" rx="10" fill="#0F172A" stroke="#10B981" stroke-width="2"/>
+      <circle cx="22" cy="21" r="7" fill="#10B981"/>
+      <text x="38" y="26" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#F8FAFC">AI Identified: Plastic (PET)</text>
+    </g>
+
+    <!-- Craft Ideas Tag -->
+    <g transform="translate(270, 260)">
+      <rect x="0" y="0" width="220" height="42" rx="10" fill="#0F172A" stroke="#FACC15" stroke-width="2"/>
+      <text x="20" y="26" font-family="system-ui, sans-serif" font-size="13" font-weight="700" fill="#FACC15">Craft Ideas Ready: 5</text>
+    </g>
+  </g>
+
+  <!-- Title Badge -->
+  <g transform="translate(40, 30)">
+    <rect x="0" y="0" width="130" height="34" rx="17" fill="#2563EB"/>
+    <text x="65" y="22" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#FFFFFF" text-anchor="middle">ROCKY APP</text>
+  </g>
+</svg>

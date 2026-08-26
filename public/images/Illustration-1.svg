@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="illBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEE2E2"/>
+      <stop offset="100%" stop-color="#FECACA"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="450" rx="20" fill="url(#illBg)" stroke="#F87171" stroke-width="2"/>
+
+  <!-- Character / Creative Illustration Canvas -->
+  <g transform="translate(150, 40)">
+    <!-- Canvas frame -->
+    <rect x="0" y="0" width="300" height="370" rx="20" fill="#FFFFFF" stroke="#18181B" stroke-width="3" filter="drop-shadow(0 15px 25px rgba(239, 68, 68, 0.15))"/>
+    
+    <!-- Friendly Robot / Creative Mascot -->
+    <g transform="translate(75, 50)">
+      <!-- Antenna -->
+      <line x1="75" y1="20" x2="75" y2="40" stroke="#18181B" stroke-width="4"/>
+      <circle cx="75" cy="15" r="8" fill="#EF4444" stroke="#18181B" stroke-width="3"/>
+      
+      <!-- Head -->
+      <rect x="25" y="40" width="100" height="80" rx="18" fill="#3B82F6" stroke="#18181B" stroke-width="4"/>
+      <!-- Visor -->
+      <rect x="40" y="58" width="70" height="36" rx="10" fill="#18181B"/>
+      <circle cx="60" cy="76" r="6" fill="#67E8F9"/>
+      <circle cx="90" cy="76" r="6" fill="#67E8F9"/>
+
+      <!-- Body -->
+      <rect x="20" y="130" width="110" height="110" rx="20" fill="#FACC15" stroke="#18181B" stroke-width="4"/>
+      <!-- Screen in belly -->
+      <rect x="38" y="150" width="74" height="65" rx="12" fill="#FFFFFF" stroke="#18181B" stroke-width="3"/>
+      <!-- Heart in belly -->
+      <path d="M 75 190 C 75 190, 55 175, 55 165 C 55 158, 62 154, 68 158 C 72 161, 75 166, 75 166 C 75 166, 78 161, 82 158 C 88 154, 95 158, 95 165 C 95 175, 75 190, 75 190 Z" fill="#EF4444"/>
+
+      <!-- Floating Sparkles around robot -->
+      <path d="M -15 80 L -10 65 L -5 80 L 10 85 L -5 90 L -10 105 L -15 90 L -30 85 Z" fill="#F59E0B" stroke="#18181B" stroke-width="1.5"/>
+      <path d="M 140 160 L 144 148 L 148 160 L 160 164 L 148 168 L 144 180 L 140 168 L 128 164 Z" fill="#3B82F6" stroke="#18181B" stroke-width="1.5"/>
+    </g>
+
+    <!-- Label -->
+    <rect x="60" y="315" width="180" height="32" rx="16" fill="#18181B"/>
+    <text x="150" y="336" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Vector Mascot Art</text>
+  </g>
+
+  <g transform="translate(30, 20)">
+    <rect x="0" y="0" width="120" height="28" rx="14" fill="#EF4444"/>
+    <text x="60" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">ILLUSTRATION</text>
+  </g>
+</svg>

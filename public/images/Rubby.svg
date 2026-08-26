@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rubbyBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <linearGradient id="yellowAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE047"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="skinTone" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <pattern id="dotPattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2" fill="#ffffff" opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <!-- Background Shape -->
+  <rect x="20" y="20" width="560" height="660" rx="36" fill="url(#rubbyBg)" />
+  <rect x="20" y="20" width="560" height="660" rx="36" fill="url(#dotPattern)" />
+
+  <!-- Decorative Yellow Arc -->
+  <path d="M 400 120 C 520 160 550 300 500 420 C 460 520 380 580 280 600" fill="none" stroke="url(#yellowAccent)" stroke-width="18" stroke-linecap="round" opacity="0.85"/>
+
+  <!-- Doodled Crown on top -->
+  <g transform="translate(230, 90) rotate(-6)">
+    <path d="M10 60 L30 20 L60 50 L90 15 L120 50 L140 20 L160 60 Z" fill="#FACC15" stroke="#18181B" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="30" cy="20" r="5" fill="#EF4444" stroke="#18181B" stroke-width="2"/>
+    <circle cx="90" cy="15" r="5" fill="#3B82F6" stroke="#18181B" stroke-width="2"/>
+    <circle cx="140" cy="20" r="5" fill="#10B981" stroke="#18181B" stroke-width="2"/>
+  </g>
+
+  <!-- Stylized Developer Silhouette Character -->
+  <g transform="translate(150, 180)">
+    <!-- Shadow / Outer Glow -->
+    <ellipse cx="150" cy="420" rx="140" ry="25" fill="#1E3A8A" opacity="0.4"/>
+    
+    <!-- Body / Jacket in Warm Yellow -->
+    <path d="M 40 360 C 40 260, 260 260, 260 360 L 280 480 L 20 480 Z" fill="#FACC15" stroke="#18181B" stroke-width="5" stroke-linejoin="round"/>
+    <!-- Inner shirt -->
+    <path d="M 120 270 L 150 340 L 180 270 Z" fill="#18181B" />
+    
+    <!-- Neck -->
+    <rect x="130" y="210" width="40" height="50" rx="6" fill="#FBBF24" stroke="#18181B" stroke-width="4"/>
+    
+    <!-- Head -->
+    <ellipse cx="150" cy="170" rx="65" ry="75" fill="#FDE047" stroke="#18181B" stroke-width="5"/>
+    
+    <!-- Hair (Trendy messy curls) -->
+    <path d="M 85 150 C 75 100, 120 80, 150 80 C 180 80, 220 95, 215 145 C 205 125, 175 120, 150 120 C 120 120, 100 135, 85 150 Z" fill="#18181B"/>
+    <path d="M 85 140 C 70 120, 90 95, 115 100" stroke="#18181B" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 140 75 C 160 65, 185 70, 195 85" stroke="#18181B" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M 185 85 C 210 90, 225 115, 220 135" stroke="#18181B" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+    <!-- Glasses -->
+    <circle cx="125" cy="170" r="22" fill="#FFFFFF" fill-opacity="0.9" stroke="#18181B" stroke-width="4"/>
+    <circle cx="175" cy="170" r="22" fill="#FFFFFF" fill-opacity="0.9" stroke="#18181B" stroke-width="4"/>
+    <line x1="147" y1="170" x2="153" y2="170" stroke="#18181B" stroke-width="4"/>
+    <!-- Eyes -->
+    <circle cx="128" cy="170" r="6" fill="#18181B"/>
+    <circle cx="178" cy="170" r="6" fill="#18181B"/>
+    <circle cx="130" cy="168" r="2" fill="#FFFFFF"/>
+    <circle cx="180" cy="168" r="2" fill="#FFFFFF"/>
+
+    <!-- Friendly Smile -->
+    <path d="M 135 205 Q 150 220 165 205" fill="none" stroke="#18181B" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Floating Sparkles & Stars -->
+  <g transform="translate(60, 100)">
+    <path d="M 25 0 L 29 18 L 47 22 L 29 26 L 25 44 L 21 26 L 3 22 L 21 18 Z" fill="#FACC15" stroke="#18181B" stroke-width="2"/>
+  </g>
+  <g transform="translate(480, 240)">
+    <path d="M 20 0 L 24 14 L 38 18 L 24 22 L 20 36 L 16 22 L 2 18 L 16 14 Z" fill="#FACC15" stroke="#18181B" stroke-width="2"/>
+  </g>
+  <g transform="translate(460, 480)">
+    <circle cx="15" cy="15" r="15" fill="#EF4444" stroke="#18181B" stroke-width="3"/>
+    <path d="M 9 15 L 13 19 L 21 11" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Floating Pill Card on Bottom Right -->
+  <g transform="translate(280, 530)">
+    <rect x="0" y="0" width="240" height="64" rx="32" fill="#FFFFFF" stroke="#18181B" stroke-width="3" filter="drop-shadow(4px 4px 0px #18181B)"/>
+    <circle cx="32" cy="32" r="14" fill="#2563EB"/>
+    <text x="32" y="37" font-family="system-ui, sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle">&lt;/&gt;</text>
+    <text x="60" y="28" font-family="system-ui, sans-serif" font-size="13" font-weight="800" fill="#18181B">PUTU RUBBY</text>
+    <text x="60" y="46" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#6B7280">Fullstack Developer</text>
+  </g>
+</svg>

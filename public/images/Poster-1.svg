@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="posterBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="450" rx="20" fill="url(#posterBg)" stroke="#F59E0B" stroke-width="2"/>
+
+  <!-- Poster Border & Inner Layout -->
+  <g transform="translate(100, 35)">
+    <rect x="0" y="0" width="400" height="380" rx="16" fill="#18181B" stroke="#FBBF24" stroke-width="4"/>
+    
+    <!-- Bold Typography Layout -->
+    <text x="30" y="70" font-family="system-ui, sans-serif" font-size="44" font-weight="900" fill="#FACC15" letter-spacing="-1">FUTURE</text>
+    <text x="30" y="115" font-family="system-ui, sans-serif" font-size="44" font-weight="900" fill="#FFFFFF" letter-spacing="-1">CODING</text>
+    <text x="30" y="160" font-family="system-ui, sans-serif" font-size="44" font-weight="900" fill="#EF4444" letter-spacing="-1">EXPERIMENT</text>
+
+    <!-- Graphic shapes -->
+    <circle cx="280" cy="270" r="70" fill="#3B82F6" opacity="0.9"/>
+    <polygon points="120,220 200,340 40,340" fill="#FACC15" opacity="0.9"/>
+    
+    <g transform="translate(30, 310)">
+      <rect x="0" y="0" width="340" height="45" rx="8" fill="#27272A"/>
+      <text x="20" y="27" font-family="monospace" font-size="12" font-weight="600" fill="#A1A1AA">VOL. 01 // EXHIBITION // EDITORIAL POSTER</text>
+    </g>
+
+    <!-- Grid lines -->
+    <line x1="30" y1="180" x2="370" y2="180" stroke="#3F3F46" stroke-width="1.5"/>
+    <line x1="220" y1="180" x2="220" y2="300" stroke="#3F3F46" stroke-width="1.5"/>
+  </g>
+
+  <g transform="translate(30, 20)">
+    <rect x="0" y="0" width="90" height="28" rx="14" fill="#D97706"/>
+    <text x="45" y="18" font-family="system-ui, sans-serif" font-size="11" font-weight="800" fill="#FFFFFF" text-anchor="middle">POSTER</text>
+  </g>
+</svg>
