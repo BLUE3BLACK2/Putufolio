@@ -1,34 +1,19 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import {
-  Mail,
-  Copy,
-  Check,
-  ArrowUpRight,
-  Sparkles
-} from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { PERSONAL_INFO } from '@/data/portfolioData';
 import { Button } from './ui/Button';
 import { RocketIllustration, SparkleDoodle, StarDoodle, CloudDoodle } from './ui/Doodles';
-import { GithubIcon, LinkedinIcon, WhatsappIcon } from './ui/SocialIcons';
 
 export function Contact() {
-  const [copiedKey, setCopiedKey] = useState<string | null>(null);
-
-  const copyToClipboard = (text: string, key: string) => {
-    navigator.clipboard.writeText(text);
-    setCopiedKey(key);
-    setTimeout(() => setCopiedKey(null), 2500);
-  };
-
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="pt-24 pb-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Large Vibrant Blue Banner inspired by the reference design */}
-        <div className="relative bg-[#1D4ED8] rounded-3xl border-3 border-stone-900 shadow-[10px_10px_0px_#18181B] p-8 sm:p-12 lg:p-16 text-white overflow-hidden mb-12">
+        <div className="relative bg-[#1D4ED8] rounded-3xl border-3 border-stone-900 shadow-[10px_10px_0px_#18181B] p-8 sm:p-12 lg:p-16 text-white overflow-hidden">
           
           {/* Background Decorative Cloud Doodles */}
           <div className="absolute top-6 left-12 pointer-events-none opacity-20">
@@ -99,148 +84,6 @@ export function Contact() {
             </div>
 
           </div>
-        </div>
-
-        {/* Interactive Direct Contact Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          
-          {/* Email Card */}
-          <div className="p-5 bg-white rounded-2xl border-2 border-stone-900 shadow-[3px_3px_0px_#18181B] flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <span className="p-2 rounded-xl bg-blue-50 text-blue-600 border border-blue-200">
-                  <Mail className="w-5 h-5" />
-                </span>
-                <button
-                  onClick={() => copyToClipboard(PERSONAL_INFO.contact.email, 'email')}
-                  className="text-xs font-bold text-stone-500 hover:text-stone-900 p-1.5 rounded-lg hover:bg-stone-100 flex items-center gap-1"
-                  title="Copy email"
-                >
-                  {copiedKey === 'email' ? (
-                    <>
-                      <Check className="w-3.5 h-3.5 text-emerald-600" />
-                      <span className="text-emerald-600 font-black">Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-3.5 h-3.5" />
-                      <span>Copy</span>
-                    </>
-                  )}
-                </button>
-              </div>
-              <p className="text-xs font-bold uppercase tracking-wider text-stone-500">Email Address</p>
-              <h4 className="font-extrabold text-stone-900 text-sm sm:text-base break-all mt-0.5">
-                {PERSONAL_INFO.contact.email}
-              </h4>
-            </div>
-            <a
-              href={`mailto:${PERSONAL_INFO.contact.email}`}
-              className="mt-4 inline-flex items-center gap-1 text-xs font-black text-blue-600 hover:underline"
-            >
-              Send an email <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
-          </div>
-
-          {/* WhatsApp Card */}
-          <div className="p-5 bg-white rounded-2xl border-2 border-stone-900 shadow-[3px_3px_0px_#18181B] flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <span className="p-2 rounded-xl bg-emerald-50 text-emerald-600 border border-emerald-200">
-                  <WhatsappIcon className="w-5 h-5" />
-                </span>
-                <button
-                  onClick={() => copyToClipboard(PERSONAL_INFO.contact.whatsapp, 'wa')}
-                  className="text-xs font-bold text-stone-500 hover:text-stone-900 p-1.5 rounded-lg hover:bg-stone-100 flex items-center gap-1"
-                  title="Copy phone number"
-                >
-                  {copiedKey === 'wa' ? (
-                    <>
-                      <Check className="w-3.5 h-3.5 text-emerald-600" />
-                      <span className="text-emerald-600 font-black">Copied!</span>
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-3.5 h-3.5" />
-                      <span>Copy</span>
-                    </>
-                  )}
-                </button>
-              </div>
-              <p className="text-xs font-bold uppercase tracking-wider text-stone-500">WhatsApp / Phone</p>
-              <h4 className="font-extrabold text-stone-900 text-sm sm:text-base mt-0.5">
-                {PERSONAL_INFO.contact.whatsapp}
-              </h4>
-            </div>
-            <a
-              href={PERSONAL_INFO.contact.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-1 text-xs font-black text-emerald-600 hover:underline"
-            >
-              Chat on WhatsApp <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
-          </div>
-
-          {/* GitHub Card */}
-          <div className="p-5 bg-white rounded-2xl border-2 border-stone-900 shadow-[3px_3px_0px_#18181B] flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <span className="p-2 rounded-xl bg-stone-100 text-stone-900 border border-stone-200">
-                  <GithubIcon className="w-5 h-5" />
-                </span>
-                <span className="text-[11px] font-bold text-stone-400 font-mono">Code</span>
-              </div>
-              <p className="text-xs font-bold uppercase tracking-wider text-stone-500">GitHub Profile</p>
-              <h4 className="font-extrabold text-stone-900 text-sm sm:text-base mt-0.5">
-                {PERSONAL_INFO.contact.github}
-              </h4>
-            </div>
-            <a
-              href={PERSONAL_INFO.contact.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center gap-1 text-xs font-black text-stone-900 hover:underline"
-            >
-              View Repositories <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
-          </div>
-
-          {/* LinkedIn & Instagram Card */}
-          <div className="p-5 bg-white rounded-2xl border-2 border-stone-900 shadow-[3px_3px_0px_#18181B] flex flex-col justify-between group hover:-translate-y-1 transition-all duration-200">
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <span className="p-2 rounded-xl bg-blue-50 text-blue-700 border border-blue-200">
-                  <LinkedinIcon className="w-5 h-5" />
-                </span>
-                <span className="text-[11px] font-bold text-rose-500 font-mono">Socials</span>
-              </div>
-              <p className="text-xs font-bold uppercase tracking-wider text-stone-500">LinkedIn &amp; Instagram</p>
-              <h4 className="font-extrabold text-stone-900 text-xs sm:text-sm mt-0.5 truncate" title={PERSONAL_INFO.contact.linkedin}>
-                {PERSONAL_INFO.contact.linkedin}
-              </h4>
-            </div>
-            <div className="flex items-center gap-3 mt-4">
-              <a
-                href={PERSONAL_INFO.contact.linkedinUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-black text-blue-700 hover:underline inline-flex items-center gap-0.5"
-              >
-                LinkedIn <ArrowUpRight className="w-3 h-3" />
-              </a>
-              <span className="text-stone-300">·</span>
-              <a
-                href={PERSONAL_INFO.contact.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-black text-rose-600 hover:underline inline-flex items-center gap-0.5"
-              >
-                Instagram <ArrowUpRight className="w-3 h-3" />
-              </a>
-            </div>
-          </div>
-
         </div>
 
       </div>

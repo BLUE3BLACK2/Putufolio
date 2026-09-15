@@ -1,9 +1,10 @@
 'use client';
 
 import React from 'react';
-import { ArrowUp, Sparkles } from 'lucide-react';
-import { SOCIAL_LINKS } from '@/data/portfolioData';
+import { ArrowUp, Mail, MessageCircle, Pin } from 'lucide-react';
+import { PERSONAL_INFO, SOCIAL_LINKS } from '@/data/portfolioData';
 import { ThanksStamp } from './ui/Doodles';
+import { Logo } from './ui/Logo';
 import { GithubIcon, LinkedinIcon, InstagramIcon, WhatsappIcon } from './ui/SocialIcons';
 
 export function Footer() {
@@ -28,14 +29,31 @@ export function Footer() {
           
           {/* Brand & Bio */}
           <div className="md:col-span-5 flex flex-col items-start">
-            <div className="flex items-center gap-2 text-2xl font-black text-stone-900 mb-3">
-              <span>Putu</span>
-              <span className="text-[#2563EB]">Rubby</span>
-              <Sparkles className="w-5 h-5 text-amber-500 fill-amber-400" />
-            </div>
-            <p className="text-sm font-medium text-stone-600 max-w-sm mb-6 leading-relaxed">
+            <a href="#home" className="mb-3" aria-label="PutuFolio home">
+              <Logo size="sm" />
+            </a>
+            <p className="text-sm font-medium text-stone-600 max-w-sm mb-5 leading-relaxed">
               Fullstack Developer exploring AI, Web, IoT &amp; Game Development. Computer Science student at Universitas Pendidikan Ganesha.
             </p>
+
+            <div className="flex flex-col gap-2 mb-5">
+              <a
+                href={`mailto:${PERSONAL_INFO.contact.email}`}
+                className="inline-flex items-center gap-2 text-sm font-bold text-stone-700 hover:text-[#2563EB] transition-colors"
+              >
+                <Mail className="w-4 h-4 text-[#2563EB]" />
+                {PERSONAL_INFO.contact.email}
+              </a>
+              <a
+                href={PERSONAL_INFO.contact.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-bold text-stone-700 hover:text-emerald-600 transition-colors"
+              >
+                <MessageCircle className="w-4 h-4 text-emerald-600" />
+                {PERSONAL_INFO.contact.whatsapp}
+              </a>
+            </div>
 
             {/* Social Links */}
             <div className="flex items-center gap-3">
@@ -53,6 +71,7 @@ export function Footer() {
                   {link.icon === 'Linkedin' && <LinkedinIcon className="w-4 h-4" />}
                   {link.icon === 'Instagram' && <InstagramIcon className="w-4 h-4" />}
                   {link.icon === 'MessageCircle' && <WhatsappIcon className="w-4 h-4" />}
+                  {link.icon === 'Pin' && <Pin className="w-4 h-4" />}
                 </a>
               ))}
             </div>

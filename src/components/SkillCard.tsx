@@ -15,7 +15,13 @@ import {
   Sparkles,
   GitBranch,
   Code2,
-  Image as ImageIcon
+  BrainCircuit,
+  Cloud,
+  CreditCard,
+  Cylinder,
+  Image as ImageIcon,
+  Layers,
+  Webhook,
 } from 'lucide-react';
 import { SkillItem } from '@/types';
 import { SpotlightCard } from './ui/SpotlightCard';
@@ -57,6 +63,18 @@ export function SkillCard({ skill, categoryColor }: SkillCardProps) {
         return <Code2 {...iconProps} />;
       case 'Image':
         return <ImageIcon {...iconProps} />;
+      case 'Layers':
+        return <Layers {...iconProps} />;
+      case 'Cylinder':
+        return <Cylinder {...iconProps} />;
+      case 'Cloud':
+        return <Cloud {...iconProps} />;
+      case 'CreditCard':
+        return <CreditCard {...iconProps} />;
+      case 'BrainCircuit':
+        return <BrainCircuit {...iconProps} />;
+      case 'Webhook':
+        return <Webhook {...iconProps} />;
       default:
         return <Code2 {...iconProps} />;
     }

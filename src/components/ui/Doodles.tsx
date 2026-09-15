@@ -107,7 +107,7 @@ export function SmileyDoodle({ className = 'w-10 h-10 text-yellow-400', style }:
 
 export function RocketIllustration({ className = 'w-48 h-48', style }: DoodleProps) {
   return (
-    <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} style={style}>
+    <svg viewBox="-20 -15 240 230" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} style={style}>
       {/* Flame trail */}
       <g transform="translate(30, 110) rotate(-45)">
         <path d="M 30 0 C 15 35, 45 45, 30 75 C 15 45, 0 35, 30 0 Z" fill="#EF4444" stroke="#18181B" strokeWidth="2.5" />

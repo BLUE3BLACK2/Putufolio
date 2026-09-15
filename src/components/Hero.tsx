@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Terminal, Code2 } from 'lucide-react';
+import { Sparkles, Terminal, Code2, Pin } from 'lucide-react';
 import { Button } from './ui/Button';
 import { ImageWithFallback } from './ui/ImageWithFallback';
 import { CrownDoodle, UnderlineScribble, SparkleDoodle, StarDoodle } from './ui/Doodles';
@@ -20,6 +20,8 @@ export function Hero() {
         return <InstagramIcon className="w-5 h-5" />;
       case 'MessageCircle':
         return <WhatsappIcon className="w-5 h-5" />;
+      case 'Pin':
+        return <Pin className="w-5 h-5" />;
       default:
         return <Code2 className="w-5 h-5" />;
     }

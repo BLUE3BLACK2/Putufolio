@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Sparkles, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { Button } from './ui/Button';
+import { Logo } from './ui/Logo';
 
 const NAV_LINKS = [
   { name: 'Home', href: '#home' },
@@ -47,19 +48,12 @@ export function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand Logo */}
         <a
           href="#home"
-          className="group flex items-center gap-2 text-xl md:text-2xl font-extrabold tracking-tight text-stone-900 focus:outline-none"
+          className="focus:outline-none"
+          aria-label="PutuFolio home"
         >
-          <span className="relative">
-            <span className="text-[#18181B]">Putu</span>
-            <span className="text-[#2563EB]">Folio</span>
-            {/* Playful sun / sparkle doodle on logo */}
-            <span className="absolute -top-2 -right-4 inline-block text-amber-500 transform group-hover:rotate-45 transition-transform duration-300">
-              <Sparkles className="w-4 h-4 fill-amber-400" />
-            </span>
-          </span>
+          <Logo />
         </a>
 
         {/* Desktop Nav Links */}

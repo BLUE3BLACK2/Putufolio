@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles, Code2, Database, Layout, Server, Wrench } from 'lucide-react';
+import { Sparkles, Code2, Database, Layout, Plug, Server, Wrench } from 'lucide-react';
 import { SKILL_CATEGORIES } from '@/data/portfolioData';
 import { SkillCard } from './SkillCard';
 import { UnderlineScribble } from './ui/Doodles';
@@ -15,6 +15,7 @@ export function Skills() {
     'Frontend Development': <Code2 className="w-3.5 h-3.5" />,
     'Backend Development': <Server className="w-3.5 h-3.5" />,
     'Database Management': <Database className="w-3.5 h-3.5" />,
+    'Platforms & Integrations': <Plug className="w-3.5 h-3.5" />,
     'UI/UX Design': <Layout className="w-3.5 h-3.5" />,
     'Developer Tools': <Wrench className="w-3.5 h-3.5" />,
   };

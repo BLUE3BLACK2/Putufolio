@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { GraduationCap, Code, BookOpen, Layers } from 'lucide-react';
-import { ImageWithFallback } from './ui/ImageWithFallback';
 import { SpotlightCard } from './ui/SpotlightCard';
-import { UnderlineScribble, SmileyDoodle } from './ui/Doodles';
+import { UnderlineScribble } from './ui/Doodles';
 import { PERSONAL_INFO } from '@/data/portfolioData';
+import { AboutPhotoStack } from './AboutPhotoStack';
 
 export function About() {
   const statIcons = [
@@ -44,28 +44,7 @@ export function About() {
           
           {/* Left Column: Image & Visual Composition */}
           <div className="lg:col-span-5 relative">
-            <div className="relative">
-              {/* Asymmetric background shapes */}
-              <div className="absolute -top-4 -left-4 w-full h-full bg-[#2563EB] rounded-3xl -rotate-2 border-2 border-stone-900 z-0" />
-              
-              {/* Main Image Container */}
-              <div className="relative z-10 bg-white rounded-3xl border-3 border-stone-900 overflow-hidden shadow-[6px_6px_0px_#18181B] aspect-square flex items-center justify-center p-2">
-                <ImageWithFallback
-                  src="/images/About.png"
-                  fallbackSrc="/images/About.svg"
-                  alt="Rubby's workspace and about visual"
-                  width={460}
-                  height={460}
-                  className="w-full h-full object-cover rounded-2xl"
-                />
-              </div>
-
-              {/* Floating Doodle Badge */}
-              <div className="absolute -bottom-5 -right-4 z-20 bg-[#FACC15] px-4 py-2 rounded-2xl border-2 border-stone-900 shadow-[3px_3px_0px_#18181B] flex items-center gap-2">
-                <SmileyDoodle className="w-6 h-6" />
-                <span className="text-xs font-black text-stone-900">Always learning</span>
-              </div>
-            </div>
+            <AboutPhotoStack />
           </div>
 
           {/* Right Column: Bio & 4 Stat Cards */}

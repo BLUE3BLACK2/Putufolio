@@ -21,10 +21,12 @@ export const PERSONAL_INFO = {
     whatsappUrl: 'https://wa.me/6282144282783?text=Hi%20Rubby,%20I%20visited%20your%20portfolio!',
     instagram: 'yoorajinky',
     instagramUrl: 'https://instagram.com/yoorajinky',
+    pinterest: 'Putu Rubby Aprilia Artana',
+    pinterestUrl: 'https://pin.it/tpe6qksdB',
     github: 'BLUE3BLACK2',
     githubUrl: 'https://github.com/BLUE3BLACK2',
     linkedin: 'Putu Rubby Aprilia Artana',
-    linkedinUrl: 'https://www.linkedin.com/in/putu-rubby-aprilia-artana',
+    linkedinUrl: 'https://www.linkedin.com/in/putu-rubby-aprilia-artana-a03ab432b/',
   }
 };
 
@@ -39,7 +41,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     name: 'LinkedIn',
     username: 'Putu Rubby Aprilia Artana',
-    url: 'https://www.linkedin.com/in/putu-rubby-aprilia-artana',
+    url: 'https://www.linkedin.com/in/putu-rubby-aprilia-artana-a03ab432b/',
     icon: 'Linkedin',
     description: 'Professional background & connections'
   },
@@ -49,6 +51,13 @@ export const SOCIAL_LINKS: SocialLink[] = [
     url: 'https://instagram.com/yoorajinky',
     icon: 'Instagram',
     description: 'Creative journey & updates'
+  },
+  {
+    name: 'Pinterest',
+    username: 'Putu Rubby Aprilia Artana',
+    url: 'https://pin.it/tpe6qksdB',
+    icon: 'Pin',
+    description: 'Visual inspiration & creative references'
   },
   {
     name: 'WhatsApp',
@@ -80,7 +89,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     badgeBg: 'bg-emerald-50 text-emerald-700 border-emerald-200',
     skills: [
       { name: 'Node.js', description: 'Event-driven JavaScript runtime for backend services & APIs.', iconName: 'Server', tag: 'Runtime' },
-      { name: 'PHP', description: 'Server-side scripting, MVC design patterns & web backends.', iconName: 'Code', tag: 'Backend' },
+      { name: 'Drizzle ORM', description: 'Type-safe database schemas, queries, and migrations for TypeScript applications.', iconName: 'Layers', tag: 'ORM' },
     ]
   },
   {
@@ -90,6 +99,20 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     badgeBg: 'bg-amber-50 text-amber-700 border-amber-200',
     skills: [
       { name: 'MySQL', description: 'Relational database schema modeling, queries, indexing & joins.', iconName: 'Database', tag: 'SQL' },
+      { name: 'PostgreSQL', description: 'Relational data modeling, advanced SQL queries, and reliable application storage.', iconName: 'Database', tag: 'SQL' },
+      { name: 'Supabase', description: 'Managed PostgreSQL, authentication, storage, and realtime backend services.', iconName: 'Cylinder', tag: 'Backend as a Service' },
+    ]
+  },
+  {
+    title: 'Platforms & Integrations',
+    description: 'Cloud deployment, payment, AI, and messaging services integrated into production-ready web applications.',
+    color: '#0891B2',
+    badgeBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
+    skills: [
+      { name: 'Vercel', description: 'Deploying and operating modern web applications with preview and production environments.', iconName: 'Cloud', tag: 'Deployment' },
+      { name: 'Midtrans', description: 'Integrating secure payment flows and transaction status handling for Indonesian applications.', iconName: 'CreditCard', tag: 'Payment' },
+      { name: 'Gemini API', description: 'Adding generative AI capabilities to websites through Google Gemini models.', iconName: 'BrainCircuit', tag: 'AI' },
+      { name: 'Evolution API', description: 'Connecting WhatsApp messaging workflows and automations to web applications.', iconName: 'Webhook', tag: 'Messaging API' },
     ]
   },
   {

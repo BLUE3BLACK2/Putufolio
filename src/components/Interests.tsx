@@ -69,13 +69,10 @@ export function Interests() {
 
                 <div>
                   {/* Icon Container */}
-                  <div className="flex items-center justify-between mb-5">
+                  <div className="flex items-center mb-5">
                     <div className="w-14 h-14 rounded-2xl bg-stone-50 border-2 border-stone-900 flex items-center justify-center shadow-[3px_3px_0px_#18181B] group-hover:scale-105 transition-transform duration-200">
                       {getInterestIcon(item.icon)}
                     </div>
-                    <span className="text-xs font-mono font-bold text-stone-400">
-                      0{index + 1}
-                    </span>
                   </div>
 
                   <h3 className="text-xl font-black text-stone-900 mb-2 group-hover:text-blue-600 transition-colors">
