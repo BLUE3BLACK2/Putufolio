@@ -180,13 +180,13 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     accentColor: '#2563EB'
   },
   {
-    id: 'poster-showcase',
-    title: 'Visual Poster & Editorial Typography',
+    id: 'poster-future-technology',
+    title: 'Technology & Future Possibilities',
     category: 'Poster',
-    description: 'Creative posters featuring bold typographic hierarchy, playful geometry, and vibrant color themes.',
-    image: '/images/Poster-1.png',
-    tags: ['Graphic Design', 'Editorial', 'Typography', 'Visual Arts'],
-    accentColor: '#F59E0B'
+    description: 'An early visual exploration connecting artificial intelligence, renewable energy, transportation, and education.',
+    image: '/images/creative/poster-01-future-technology.webp',
+    tags: ['Technology', 'AI', 'Digital Collage'],
+    accentColor: '#2563EB'
   },
   {
     id: 'illustration-showcase',
@@ -196,6 +196,42 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     image: '/images/Illustration-1.png',
     tags: ['Digital Art', 'Vector', 'Concept Art', 'Creative'],
     accentColor: '#EF4444'
+  },
+  {
+    id: 'poster-indonesian-heritage',
+    title: 'Ini Indonesia, Ini Rumah Kita',
+    category: 'Poster',
+    description: 'A cultural poster celebrating the richness of Indonesian traditions, performances, flora, and fauna.',
+    image: '/images/creative/poster-02-indonesian-heritage.webp',
+    tags: ['Culture', 'Indonesia', 'Digital Illustration'],
+    accentColor: '#B91C1C'
+  },
+  {
+    id: 'poster-food-heritage',
+    title: 'Warisan Pangan, Bangsa Kuat',
+    category: 'Poster',
+    description: 'A campaign illustration encouraging people to preserve diverse, nutritious, locally sourced food traditions.',
+    image: '/images/creative/poster-03-food-heritage.webp',
+    tags: ['Food Heritage', 'Campaign', 'Illustration'],
+    accentColor: '#D97706'
+  },
+  {
+    id: 'poster-ocean-guardian',
+    title: 'Ocean Guardian',
+    category: 'Poster',
+    description: 'A concept poster presenting an autonomous bio-acoustic robot for coral reef restoration.',
+    image: '/images/creative/poster-04-ocean-guardian.webp',
+    tags: ['Ocean', 'Innovation', 'Sustainability'],
+    accentColor: '#0369A1'
+  },
+  {
+    id: 'poster-waste-mindset',
+    title: 'Ubah Mindset Sampahmu',
+    category: 'Poster',
+    description: 'An environmental campaign poster about personal responsibility and changing everyday waste habits.',
+    image: '/images/creative/poster-05-waste-mindset.webp',
+    tags: ['Environment', 'Campaign', 'Waste Awareness'],
+    accentColor: '#EA580C'
   }
 ];
 

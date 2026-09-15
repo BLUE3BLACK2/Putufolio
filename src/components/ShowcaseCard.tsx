@@ -21,14 +21,14 @@ export function ShowcaseCard({ item }: ShowcaseCardProps) {
       variant="default"
       className="p-0 border-3 border-stone-900 shadow-[6px_6px_0px_#18181B] bg-white rounded-3xl overflow-hidden group cursor-pointer"
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-stone-100">
+      <div className="relative aspect-[4/5] w-full overflow-hidden bg-stone-100">
         <ImageWithFallback
           src={item.image}
           fallbackSrc={fallbackMap[item.category] || '/images/UI-Design.svg'}
           alt={item.title}
           width={600}
           height={450}
-          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
         />
 
         <div className="absolute top-4 left-4 z-10">
