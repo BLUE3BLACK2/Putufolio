@@ -1,16 +1,19 @@
 'use client';
 
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import { ArrowUpRight, Sparkles } from 'lucide-react';
 import { ShowcaseItem } from '@/types';
 import { SpotlightCard } from './ui/SpotlightCard';
 import { ImageWithFallback } from './ui/ImageWithFallback';
+import { ArtworkLightbox } from './ArtworkLightbox';
 
 interface ShowcaseCardProps {
   item: ShowcaseItem;
 }
 
 export function ShowcaseCard({ item }: ShowcaseCardProps) {
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const closeLightbox = useCallback(() => setIsLightboxOpen(false), []);
   const fallbackMap: Record<string, string> = {
     'Art': '/images/Illustration-1.svg',
     'Poster': '/images/Poster-1.svg',
@@ -51,9 +54,9 @@ export function ShowcaseCard({ item }: ShowcaseCardProps) {
                 {item.title}
               </h4>
             </div>
-            <div className="w-10 h-10 rounded-full bg-white text-stone-900 flex items-center justify-center transform translate-y-2 group-hover:translate-y-0 group-hover:translate-x-1 transition-transform duration-300 shadow-md shrink-0">
+            <button type="button" onClick={() => setIsLightboxOpen(true)} className="w-10 h-10 rounded-full bg-white text-stone-900 flex items-center justify-center transform translate-y-2 group-hover:translate-y-0 group-hover:translate-x-1 hover:bg-[#FACC15] transition-all duration-300 shadow-md shrink-0 cursor-pointer" aria-label={`View ${item.title} in full`}>
               <ArrowUpRight className="w-5 h-5" />
-            </div>
+            </button>
           </div>
         </div>
       </div>
@@ -77,6 +80,7 @@ export function ShowcaseCard({ item }: ShowcaseCardProps) {
           ))}
         </div>
       </div>
+      <ArtworkLightbox isOpen={isLightboxOpen} image={item.image} title={item.title} onClose={closeLightbox} />
     </SpotlightCard>
   );
 }
