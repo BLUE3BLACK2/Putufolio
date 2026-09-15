@@ -43,6 +43,8 @@ const WEB_PROJECTS = [
   },
 ] as const;
 
+const PROJECT_NAV_BUTTON_STYLE = 'w-12 h-12 rounded-xl bg-white border-2 border-stone-900 grid place-items-center shadow-[3px_3px_0px_#18181B] hover:bg-[#FACC15] active:bg-[#FACC15] active:translate-y-0.5 active:shadow-none transition-all cursor-pointer';
+
 export function FeaturedProject() {
   const [activeIndex, setActiveIndex] = useState(0);
   const project = WEB_PROJECTS[activeIndex];
@@ -82,10 +84,10 @@ export function FeaturedProject() {
             </p>
           </div>
           <div className="flex items-center gap-2 shrink-0">
-            <button type="button" onClick={showPrevious} className="w-12 h-12 rounded-xl bg-white border-2 border-stone-900 grid place-items-center shadow-[3px_3px_0px_#18181B] hover:bg-stone-100 active:translate-y-0.5 active:shadow-none transition-all cursor-pointer" aria-label="Previous project">
+            <button type="button" onClick={showPrevious} className={PROJECT_NAV_BUTTON_STYLE} aria-label="Previous project">
               <ArrowLeft className="w-5 h-5" />
             </button>
-            <button type="button" onClick={showNext} className="w-12 h-12 rounded-xl bg-[#FACC15] border-2 border-stone-900 grid place-items-center shadow-[3px_3px_0px_#18181B] hover:bg-[#FBBF24] active:translate-y-0.5 active:shadow-none transition-all cursor-pointer" aria-label="Next project">
+            <button type="button" onClick={showNext} className={PROJECT_NAV_BUTTON_STYLE} aria-label="Next project">
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>
