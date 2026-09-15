@@ -40,7 +40,7 @@ export function Showcase() {
           </div>
           <div className="relative mb-4">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-stone-900 tracking-tight">
-              Things I Create Beyond Code
+              My Gallery
             </h2>
             <div className="w-56 mx-auto mt-2">
               <UnderlineScribble className="w-full h-3 text-amber-400" />

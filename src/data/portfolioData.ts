@@ -171,13 +171,58 @@ export const FEATURED_PROJECT: ProjectData = {
 
 export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
-    id: 'ui-design-showcase',
-    title: 'Digital Art & Visual Exploration',
+    id: 'art-anime-ink',
+    title: 'Anime Character & Frogs',
     category: 'Art',
-    description: 'A collection of visual studies created through illustration, composition, and creative experimentation.',
-    image: '/images/UI-Design.png',
-    tags: ['Digital Art', 'Visual Study', 'Composition'],
-    accentColor: '#2563EB'
+    description: 'A detailed character study drawn by hand with expressive ink lines and playful supporting elements.',
+    image: '/images/creative/art-01-anime-ink.webp',
+    tags: ['Pencil & Pen', 'Character Study', 'Hand Drawing'],
+    accentColor: '#334155'
+  },
+  {
+    id: 'art-anime-pencil',
+    title: 'Anime Portrait Study',
+    category: 'Art',
+    description: 'A graphite portrait study focused on facial expression, hair movement, and tonal contrast.',
+    image: '/images/creative/art-02-anime-pencil.webp',
+    tags: ['Pencil & Pen', 'Graphite', 'Portrait'],
+    accentColor: '#475569'
+  },
+  {
+    id: 'art-expressive-portrait',
+    title: 'Expressive Portrait',
+    category: 'Art',
+    description: 'A dramatic hand-drawn portrait exploring intense expression through deep shadows and fine details.',
+    image: '/images/creative/art-03-expressive-portrait.webp',
+    tags: ['Pencil & Pen', 'Shading', 'Expression'],
+    accentColor: '#1F2937'
+  },
+  {
+    id: 'art-pencil-portrait',
+    title: 'Portrait with Glasses',
+    category: 'Art',
+    description: 'A pencil portrait study built from layered hatching, facial planes, and carefully observed details.',
+    image: '/images/creative/art-04-pencil-portrait.webp',
+    tags: ['Pencil & Pen', 'Hatching', 'Portrait'],
+    accentColor: '#64748B'
+  },
+  {
+    id: 'art-batman-painting',
+    title: 'Batman Painting',
+    category: 'Art',
+    description: 'A hand-painted Batman composition featuring bold color, textured brushwork, and dramatic comic imagery.',
+    image: '/images/creative/art-05-batman-painting.webp',
+    tags: ['Painting', 'Batman', 'Traditional Art'],
+    accentColor: '#B91C1C'
+  },
+  {
+    id: 'art-ibispaint-portrait',
+    title: 'Blue Portrait',
+    category: 'Art',
+    description: 'A digital portrait created in ibisPaint with clean color blocking, soft shading, and a vivid blue backdrop.',
+    image: '/images/creative/art-06-ibispaint-portrait.webp',
+    tags: ['Digital Art', 'ibisPaint', 'Portrait'],
+    accentColor: '#0284C7'
   },
   {
     id: 'poster-future-technology',
@@ -187,15 +232,6 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     image: '/images/creative/poster-01-future-technology.webp',
     tags: ['Technology', 'AI', 'Digital Collage'],
     accentColor: '#2563EB'
-  },
-  {
-    id: 'illustration-showcase',
-    title: 'Digital Illustrations & Creative Assets',
-    category: 'Art',
-    description: 'Custom vector artwork, character design sketches, and graphic storytelling elements.',
-    image: '/images/Illustration-1.png',
-    tags: ['Digital Art', 'Vector', 'Concept Art', 'Creative'],
-    accentColor: '#EF4444'
   },
   {
     id: 'poster-indonesian-heritage',
