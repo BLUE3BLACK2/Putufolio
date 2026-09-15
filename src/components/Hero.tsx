@@ -135,8 +135,7 @@ export function Hero() {
               {/* Main Avatar Container */}
               <div className="relative z-10 bg-white rounded-3xl border-3 border-stone-900 overflow-hidden shadow-[8px_8px_0px_#18181B] aspect-[4/5] flex items-center justify-center">
                 <ImageWithFallback
-                  src="/images/Rubby.png"
-                  fallbackSrc="/images/Rubby.svg"
+                  src="/images/rubby-hero.webp"
                   alt="Putu Rubby Aprilia Artana - Fullstack Developer"
                   width={500}
                   height={625}
