@@ -172,11 +172,11 @@ export const FEATURED_PROJECT: ProjectData = {
 export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
     id: 'ui-design-showcase',
-    title: 'UI Design System & Mobile Interfaces',
-    category: 'UI Design',
-    description: 'Clean user interfaces, accessible typography systems, and modular design components created in Figma.',
+    title: 'Digital Art & Visual Exploration',
+    category: 'Art',
+    description: 'A collection of visual studies created through illustration, composition, and creative experimentation.',
     image: '/images/UI-Design.png',
-    tags: ['Figma', 'UI/UX', 'Component Library', 'Design Tokens'],
+    tags: ['Digital Art', 'Visual Study', 'Composition'],
     accentColor: '#2563EB'
   },
   {
@@ -191,7 +191,7 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
     id: 'illustration-showcase',
     title: 'Digital Illustrations & Creative Assets',
-    category: 'Illustration',
+    category: 'Art',
     description: 'Custom vector artwork, character design sketches, and graphic storytelling elements.',
     image: '/images/Illustration-1.png',
     tags: ['Digital Art', 'Vector', 'Concept Art', 'Creative'],

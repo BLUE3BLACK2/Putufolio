@@ -54,7 +54,7 @@ export interface ProjectData {
 export interface ShowcaseItem {
   id: string;
   title: string;
-  category: 'UI Design' | 'Poster' | 'Illustration';
+  category: 'Art' | 'Poster';
   description: string;
   image: string;
   tags: string[];

@@ -12,9 +12,8 @@ interface ShowcaseCardProps {
 
 export function ShowcaseCard({ item }: ShowcaseCardProps) {
   const fallbackMap: Record<string, string> = {
-    'UI Design': '/images/UI-Design.svg',
+    'Art': '/images/Illustration-1.svg',
     'Poster': '/images/Poster-1.svg',
-    'Illustration': '/images/Illustration-1.svg',
   };
 
   return (
@@ -23,7 +22,6 @@ export function ShowcaseCard({ item }: ShowcaseCardProps) {
       className="p-0 border-3 border-stone-900 shadow-[6px_6px_0px_#18181B] bg-white rounded-3xl overflow-hidden group cursor-pointer"
     >
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-stone-100">
-        {/* Image */}
         <ImageWithFallback
           src={item.image}
           fallbackSrc={fallbackMap[item.category] || '/images/UI-Design.svg'}
@@ -33,7 +31,6 @@ export function ShowcaseCard({ item }: ShowcaseCardProps) {
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
 
-        {/* Category Pill Tag */}
         <div className="absolute top-4 left-4 z-10">
           <span
             className="px-3.5 py-1 rounded-full text-xs font-black text-white shadow-sm border border-stone-900 flex items-center gap-1.5"
@@ -44,8 +41,7 @@ export function ShowcaseCard({ item }: ShowcaseCardProps) {
           </span>
         </div>
 
-        {/* Hover Overlay with Arrow */}
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+        <div className="absolute inset-0 bg-stone-950/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
           <div className="w-full flex items-center justify-between text-white">
             <div>
               <p className="text-xs font-bold text-yellow-400 uppercase tracking-wider">
@@ -62,7 +58,6 @@ export function ShowcaseCard({ item }: ShowcaseCardProps) {
         </div>
       </div>
 
-      {/* Card Body */}
       <div className="p-6">
         <h4 className="font-black text-stone-900 text-lg sm:text-xl mb-2 group-hover:text-blue-600 transition-colors">
           {item.title}
@@ -71,7 +66,6 @@ export function ShowcaseCard({ item }: ShowcaseCardProps) {
           {item.description}
         </p>
 
-        {/* Tags */}
         <div className="flex flex-wrap gap-1.5 pt-3 border-t border-stone-100">
           {item.tags.map((tag) => (
             <span
