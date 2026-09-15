@@ -53,8 +53,8 @@ export function Navbar() {
           className="group flex items-center gap-2 text-xl md:text-2xl font-extrabold tracking-tight text-stone-900 focus:outline-none"
         >
           <span className="relative">
-            <span className="text-[#18181B]">Putu</span>{' '}
-            <span className="text-[#2563EB]">Rubby</span>
+            <span className="text-[#18181B]">Putu</span>
+            <span className="text-[#2563EB]">Folio</span>
             {/* Playful sun / sparkle doodle on logo */}
             <span className="absolute -top-2 -right-4 inline-block text-amber-500 transform group-hover:rotate-45 transition-transform duration-300">
               <Sparkles className="w-4 h-4 fill-amber-400" />
