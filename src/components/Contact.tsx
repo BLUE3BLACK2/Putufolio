@@ -46,7 +46,7 @@ export function Contact() {
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-4">
                 <Button
-                  href={`mailto:${PERSONAL_INFO.contact.email}`}
+                  href={PERSONAL_INFO.contact.whatsappUrl}
                   variant="yellow"
                   size="lg"
                   showArrow
