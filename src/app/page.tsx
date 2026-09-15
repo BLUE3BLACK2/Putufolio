@@ -9,39 +9,21 @@ import { Education } from '@/components/Education';
 import { Interests } from '@/components/Interests';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
+import { ScrollReveal } from '@/components/ui/ScrollReveal';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#FAF7F2] text-[#18181B] selection:bg-[#FACC15] selection:text-[#18181B] relative">
-      {/* Sticky Navigation */}
       <Navbar />
-
-      {/* Hero Section */}
-      <Hero />
-
-      {/* About Me Section */}
-      <About />
-
-      {/* Skills Section ("WHAT I WORK WITH") */}
-      <Skills />
-
-      {/* Featured Project Section ("ROCKY") */}
-      <FeaturedProject />
-
-      {/* Creative Showcase Section */}
-      <Showcase />
-
-      {/* Education Section */}
-      <Education />
-
-      {/* Interests Section ("CURIOUS ABOUT") */}
-      <Interests />
-
-      {/* Contact Section */}
-      <Contact />
-
-      {/* Footer */}
-      <Footer />
+      <ScrollReveal><Hero /></ScrollReveal>
+      <ScrollReveal><About /></ScrollReveal>
+      <ScrollReveal><Skills /></ScrollReveal>
+      <ScrollReveal><FeaturedProject /></ScrollReveal>
+      <ScrollReveal><Showcase /></ScrollReveal>
+      <ScrollReveal><Education /></ScrollReveal>
+      <ScrollReveal><Interests /></ScrollReveal>
+      <ScrollReveal><Contact /></ScrollReveal>
+      <ScrollReveal><Footer /></ScrollReveal>
     </main>
   );
 }
