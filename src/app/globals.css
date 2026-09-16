@@ -24,6 +24,10 @@
   font-family: var(--font-handwriting), 'Caveat', 'Comic Sans MS', cursive;
 }
 
+.section-scroll-target {
+  scroll-margin-top: 7rem;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

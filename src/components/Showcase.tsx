@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDown, ChevronUp, Palette } from 'lucide-react';
 import { SHOWCASE_ITEMS } from '@/data/portfolioData';
@@ -16,6 +16,15 @@ type ShowcaseFilter = (typeof FILTERS)[number];
 export function Showcase() {
   const [activeFilter, setActiveFilter] = useState<ShowcaseFilter>('All');
   const [showAll, setShowAll] = useState(false);
+  const galleryHeadingRef = useRef<HTMLDivElement>(null);
+  const restoreGalleryPositionRef = useRef(false);
+
+  useLayoutEffect(() => {
+    if (!showAll && restoreGalleryPositionRef.current) {
+      galleryHeadingRef.current?.scrollIntoView({ behavior: 'instant', block: 'start' });
+      restoreGalleryPositionRef.current = false;
+    }
+  }, [showAll]);
 
   const filteredItems = useMemo(
     () => activeFilter === 'All' ? SHOWCASE_ITEMS : SHOWCASE_ITEMS.filter((item) => item.category === activeFilter),
@@ -30,10 +39,19 @@ export function Showcase() {
     setShowAll(false);
   };
 
+  const toggleGallery = () => {
+    if (showAll) {
+      restoreGalleryPositionRef.current = true;
+      galleryHeadingRef.current?.focus({ preventScroll: true });
+      galleryHeadingRef.current?.scrollIntoView({ behavior: 'instant', block: 'start' });
+    }
+    setShowAll((value) => !value);
+  };
+
   return (
     <section id="showcase" className="py-24 relative overflow-hidden bg-[#FAF7F2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12">
+        <div ref={galleryHeadingRef} tabIndex={-1} className="section-scroll-target flex flex-col items-center text-center max-w-3xl mx-auto mb-12 focus:outline-none">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white border border-stone-300 text-xs font-black uppercase tracking-wider text-blue-600 mb-3 shadow-xs">
             <Palette className="w-3.5 h-3.5" />
             CREATIVE SHOWCASE
@@ -89,7 +107,8 @@ export function Showcase() {
               variant="outline"
               size="md"
               icon={showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-              onClick={() => setShowAll((value) => !value)}
+              onClick={toggleGallery}
+              aria-expanded={showAll}
             >
               {showAll ? 'SHOW LESS' : 'SEE OTHER'}
             </Button>
