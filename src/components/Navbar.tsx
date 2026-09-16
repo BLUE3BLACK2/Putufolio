@@ -24,19 +24,24 @@ export function Navbar() {
       setIsScrolled(window.scrollY > 20);
 
       const sections = NAV_LINKS.map((link) => link.href.substring(1));
-      const scrollPosition = window.scrollY + 200;
+      const activationLine = Math.min(200, window.innerHeight * 0.3);
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
-        if (section && section.offsetTop <= scrollPosition) {
+        if (section && section.getBoundingClientRect().top <= activationLine) {
           setActiveSection(sections[i]);
           break;
         }
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
   }, []);
 
   return (
@@ -64,6 +69,7 @@ export function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
+                aria-current={isActive ? 'location' : undefined}
                 className={`relative px-4 py-1.5 text-sm font-semibold rounded-full transition-all duration-200 ${
                   isActive
                     ? 'text-stone-900 bg-stone-100 font-bold'
@@ -111,6 +117,7 @@ export function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
+                aria-current={activeSection === link.href.substring(1) ? 'location' : undefined}
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center justify-between text-lg font-bold text-stone-800 py-2.5 px-4 rounded-xl hover:bg-white transition-colors"
               >
