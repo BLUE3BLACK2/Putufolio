@@ -248,31 +248,13 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     accentColor: '#0284C7'
   },
   {
-    id: 'poster-future-technology',
-    title: 'Technology & Future Possibilities',
+    id: 'poster-waste-mindset',
+    title: 'Ubah Mindset Sampahmu',
     category: 'Poster',
-    description: 'An early visual exploration connecting artificial intelligence, renewable energy, transportation, and education.',
-    image: '/images/creative/poster-01-future-technology.webp',
-    tags: ['Technology', 'AI', 'Digital Collage'],
-    accentColor: '#2563EB'
-  },
-  {
-    id: 'poster-indonesian-heritage',
-    title: 'Ini Indonesia, Ini Rumah Kita',
-    category: 'Poster',
-    description: 'A cultural poster celebrating the richness of Indonesian traditions, performances, flora, and fauna.',
-    image: '/images/creative/poster-02-indonesian-heritage.webp',
-    tags: ['Culture', 'Indonesia', 'Digital Illustration'],
-    accentColor: '#B91C1C'
-  },
-  {
-    id: 'poster-food-heritage',
-    title: 'Warisan Pangan, Bangsa Kuat',
-    category: 'Poster',
-    description: 'A campaign illustration encouraging people to preserve diverse, nutritious, locally sourced food traditions.',
-    image: '/images/creative/poster-03-food-heritage.webp',
-    tags: ['Food Heritage', 'Campaign', 'Illustration'],
-    accentColor: '#D97706'
+    description: 'An environmental campaign poster about personal responsibility and changing everyday waste habits.',
+    image: '/images/creative/poster-05-waste-mindset.webp',
+    tags: ['Environment', 'Campaign', 'Waste Awareness'],
+    accentColor: '#EA580C'
   },
   {
     id: 'poster-ocean-guardian',
@@ -284,13 +266,31 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     accentColor: '#0369A1'
   },
   {
-    id: 'poster-waste-mindset',
-    title: 'Ubah Mindset Sampahmu',
+    id: 'poster-food-heritage',
+    title: 'Warisan Pangan, Bangsa Kuat',
     category: 'Poster',
-    description: 'An environmental campaign poster about personal responsibility and changing everyday waste habits.',
-    image: '/images/creative/poster-05-waste-mindset.webp',
-    tags: ['Environment', 'Campaign', 'Waste Awareness'],
-    accentColor: '#EA580C'
+    description: 'A campaign illustration encouraging people to preserve diverse, nutritious, locally sourced food traditions.',
+    image: '/images/creative/poster-03-food-heritage.webp',
+    tags: ['Food Heritage', 'Campaign', 'Illustration'],
+    accentColor: '#D97706'
+  },
+  {
+    id: 'poster-indonesian-heritage',
+    title: 'Ini Indonesia, Ini Rumah Kita',
+    category: 'Poster',
+    description: 'A cultural poster celebrating the richness of Indonesian traditions, performances, flora, and fauna.',
+    image: '/images/creative/poster-02-indonesian-heritage.webp',
+    tags: ['Culture', 'Indonesia', 'Digital Illustration'],
+    accentColor: '#B91C1C'
+  },
+  {
+    id: 'poster-future-technology',
+    title: 'Technology & Future Possibilities',
+    category: 'Poster',
+    description: 'An early visual exploration connecting artificial intelligence, renewable energy, transportation, and education.',
+    image: '/images/creative/poster-01-future-technology.webp',
+    tags: ['Technology', 'AI', 'Digital Collage'],
+    accentColor: '#2563EB'
   }
 ];
 
