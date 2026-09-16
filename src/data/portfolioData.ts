@@ -300,11 +300,10 @@ export const EDUCATION_DATA: EducationInfo = {
   startYear: '2024',
   status: '5th Semester',
   degree: 'Bachelor of Computer Science (S.Kom)',
-  highlights: [
-    'Specializing in Fullstack Web Development & Software Engineering.',
-    'Actively exploring Artificial Intelligence, Neural Vision, and Agentic workflows.',
-    'Experimenting with Internet of Things (IoT) sensors and Microcontroller architectures.',
-    'Designing interactive mechanics and logic for Game Development experiments.'
+  schools: [
+    { level: 'SD', institution: 'SDN 1 Sulanyah' },
+    { level: 'SMP', institution: 'SMPN 1 Seririt' },
+    { level: 'SMA', institution: 'SMA Saraswati Seririt' },
   ]
 };
 

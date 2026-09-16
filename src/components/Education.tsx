@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { GraduationCap, Calendar, CheckCircle2 } from 'lucide-react';
+import { GraduationCap, Calendar, School } from 'lucide-react';
 import { EDUCATION_DATA } from '@/data/portfolioData';
 import { SpotlightCard } from './ui/SpotlightCard';
 import { UnderlineScribble } from './ui/Doodles';
@@ -58,21 +58,23 @@ export function Education() {
               </div>
             </div>
 
-            {/* Right Col: Key Academic Highlights */}
             <div className="lg:col-span-7 pl-0 lg:pl-8 border-t lg:border-t-0 lg:border-l border-stone-200 pt-6 lg:pt-0">
               <h4 className="text-xs font-black uppercase tracking-wider text-stone-500 mb-4">
-                Academic &amp; Exploration Focus
+                Previous Education
               </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                {EDUCATION_DATA.highlights.map((item, idx) => (
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                {EDUCATION_DATA.schools.map((school) => (
                   <div
-                    key={idx}
-                    className="p-3 rounded-xl bg-stone-50 border border-stone-200 flex items-start gap-2.5"
+                    key={school.level}
+                    className="p-4 rounded-xl bg-stone-50 border border-stone-200"
                   >
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                    <span className="text-xs text-stone-700 font-medium leading-relaxed">
-                      {item}
-                    </span>
+                    <div className="flex items-center gap-2 text-blue-600 mb-3">
+                      <School className="w-4 h-4 shrink-0" />
+                      <span className="text-xs font-black tracking-wider">{school.level}</span>
+                    </div>
+                    <p className="text-sm text-stone-900 font-bold leading-relaxed">
+                      {school.institution}
+                    </p>
                   </div>
                 ))}
               </div>

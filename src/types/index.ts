@@ -67,7 +67,7 @@ export interface EducationInfo {
   startYear: string;
   status: string;
   degree: string;
-  highlights: string[];
+  schools: { level: string; institution: string }[];
 }
 
 export interface InterestItem {
