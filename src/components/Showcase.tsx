@@ -1,7 +1,7 @@
 'use client';
 
-import { useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { animate, AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { ChevronDown, ChevronUp, Palette } from 'lucide-react';
 import { SHOWCASE_ITEMS } from '@/data/portfolioData';
 import { ShowcaseCard } from './ShowcaseCard';
@@ -17,14 +17,11 @@ export function Showcase() {
   const [activeFilter, setActiveFilter] = useState<ShowcaseFilter>('All');
   const [showAll, setShowAll] = useState(false);
   const galleryHeadingRef = useRef<HTMLDivElement>(null);
-  const restoreGalleryPositionRef = useRef(false);
+  const scrollAnimationRef = useRef<{ stop: () => void } | null>(null);
+  const [isCollapsing, setIsCollapsing] = useState(false);
+  const reduceMotion = useReducedMotion();
 
-  useLayoutEffect(() => {
-    if (!showAll && restoreGalleryPositionRef.current) {
-      galleryHeadingRef.current?.scrollIntoView({ behavior: 'instant', block: 'start' });
-      restoreGalleryPositionRef.current = false;
-    }
-  }, [showAll]);
+  useEffect(() => () => scrollAnimationRef.current?.stop(), []);
 
   const filteredItems = useMemo(
     () => activeFilter === 'All' ? SHOWCASE_ITEMS : SHOWCASE_ITEMS.filter((item) => item.category === activeFilter),
@@ -40,12 +37,27 @@ export function Showcase() {
   };
 
   const toggleGallery = () => {
-    if (showAll) {
-      restoreGalleryPositionRef.current = true;
-      galleryHeadingRef.current?.focus({ preventScroll: true });
-      galleryHeadingRef.current?.scrollIntoView({ behavior: 'instant', block: 'start' });
+    if (!showAll) {
+      setShowAll(true);
+      return;
     }
-    setShowAll((value) => !value);
+    const heading = galleryHeadingRef.current;
+    if (!heading || isCollapsing) return;
+
+    setIsCollapsing(true);
+    const margin = parseFloat(getComputedStyle(heading).scrollMarginTop) || 0;
+    const target = Math.max(0, heading.getBoundingClientRect().top + window.scrollY - margin);
+    scrollAnimationRef.current = animate(window.scrollY, target, {
+      duration: reduceMotion ? 0 : 0.7,
+      ease: [0.22, 1, 0.36, 1],
+      onUpdate: (top) => window.scrollTo({ top, behavior: 'instant' }),
+      onComplete: () => {
+        heading.focus({ preventScroll: true });
+        setShowAll(false);
+        setIsCollapsing(false);
+        scrollAnimationRef.current = null;
+      },
+    });
   };
 
   return (
@@ -109,6 +121,7 @@ export function Showcase() {
               icon={showAll ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
               onClick={toggleGallery}
               aria-expanded={showAll}
+              disabled={isCollapsing}
             >
               {showAll ? 'SHOW LESS' : 'SEE OTHER'}
             </Button>
