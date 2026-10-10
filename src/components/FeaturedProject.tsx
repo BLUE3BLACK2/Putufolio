@@ -6,6 +6,12 @@ import { ArrowLeft, ArrowRight, ExternalLink, Globe2 } from 'lucide-react';
 
 const WEB_PROJECTS = [
   {
+    title: 'Art Ana',
+    category: 'Website',
+    description: 'Explore Art Ana through the live preview or open the full website.',
+    url: 'https://art-ana.vercel.app/',
+  },
+  {
     title: 'BTech Web Template',
     category: 'Company Website',
     description: 'A polished business website template with a clear content hierarchy and responsive presentation.',
@@ -80,7 +86,7 @@ export function FeaturedProject() {
               Websites I&apos;ve brought to life.
             </h2>
             <p className="text-base sm:text-lg text-stone-600 font-medium max-w-2xl mt-3">
-              Explore six live projects. Use the arrows, dots, or keyboard to move between them.
+              Explore my live projects. Use the arrows, dots, or keyboard to move between them.
             </p>
           </div>
           <div className="flex items-center gap-2 shrink-0">
@@ -120,8 +126,6 @@ export function FeaturedProject() {
             <AnimatePresence mode="wait">
               <motion.div key={project.title} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: 0.2 }}>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="font-mono text-xs font-black text-blue-600">0{activeIndex + 1} / 0{WEB_PROJECTS.length}</span>
-                  <span className="w-1 h-1 rounded-full bg-stone-400" />
                   <span className="text-xs font-black uppercase tracking-wider text-stone-500">{project.category}</span>
                 </div>
                 <h3 className="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight">{project.title}</h3>
@@ -136,7 +140,7 @@ export function FeaturedProject() {
 
         <div className="flex items-center justify-center gap-2.5 mt-8" role="tablist" aria-label="Choose a web project">
           {WEB_PROJECTS.map((item, index) => (
-            <button key={item.url} type="button" onClick={() => setActiveIndex(index)} className={`h-3 rounded-full border border-stone-900 transition-all cursor-pointer ${activeIndex === index ? 'w-9 bg-[#2563EB]' : 'w-3 bg-white hover:bg-[#FACC15]'}`} aria-label={`Show project ${index + 1}: ${item.title}`} aria-selected={activeIndex === index} role="tab" />
+            <button key={item.url} type="button" onClick={() => setActiveIndex(index)} className={`h-3 rounded-full border border-stone-900 transition-all cursor-pointer ${activeIndex === index ? 'w-9 bg-[#2563EB]' : 'w-3 bg-white hover:bg-[#FACC15]'}`} aria-label={`Show ${item.title}`} aria-selected={activeIndex === index} role="tab" />
           ))}
         </div>
       </div>
